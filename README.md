@@ -67,47 +67,30 @@ chapters in the Jupylet Programmer's Reference Guide.
 
 ## How to Install and Run Jupylet
 
-If you are new to Python, I recommend that you install and use the
-[Miniconda Python](https://docs.conda.io/en/latest/miniconda.html)
-distribution. 
-
-**On Windows** &ndash; download and run the 64-bit installer for Python 3.11. Once 
-Miniconda is installed press the `⊞ Winkey` and then type *Miniconda* and 
-press the `Enter` key. This should open a small window that programmers call 
-*console* or *shell* in which you can enter commands and run programs.
-
-**On macOS with M1 processor** &ndash; download and run "Miniconda3 macOS Apple M1 64-bit pkg" 
-for Python 3.11. Once installed click the Spotlight icon `🔍` and in the search 
-field type *terminal* and press the `Enter` key to open the console. Then you need 
-to run the following command:
-
-    pip install --extra-index https://github.com/nir/jupylet/releases/download/v0.9.2/ moderngl glcontext
-
-**On macOS with Intel processor** &ndash; download and run "Miniconda3 macOS Intel x86 64-bit pkg" 
-for Python 3.11. Once installed click the Spotlight icon `🔍` and in the search 
-field type *terminal* and press the `Enter` key to open the console.
-
 **On Linux** &ndash; download "Miniconda3 Linux 64-bit". This should download the file
-Miniconda3-latest-Linux-x86_64.sh. Install it by running the following command 
+Miniconda3-latest-Linux-x86_64.sh:
+
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+Install it by running the following command 
 in a bash shell (once installed start a new bash shell):
 
     bash Miniconda3-latest-Linux-x86_64.sh
 
+Create jupylet conda environment:
+
+    conda create --name jupylet python=3.11
+
+Activate the conda environment:
+
+    conda activate jupylet
+
 ---
 
-Once Miniconda is installed it is time to install *jupylet* by typing the 
+Once Conda environment is created, it is time to install *jupylet* by typing the 
 following command in the console:
 
-    pip install jupylet
-
-Next, to run the example notebooks, download the *jupylet* source code. 
-If you have [Git](https://git-scm.com/) installed type the following command:
-
-    git clone https://github.com/nir/jupylet.git
-
-Alternatively, you can download the source code with the following command:
-
-    python -m jupylet download
+    pip3 install jupylet
 
 Next, enter the *jupylet/examples/* directory with the change directory
 command:
@@ -116,7 +99,7 @@ command:
 
 And start a jupyter notebook with:
 
-    jupyter notebook 11-spaceship.ipynb
+    jupyter lab
 
 Run the notebook by following the instructions in the notebook and a game
 canvas should appear with the spaceship example:
@@ -126,7 +109,7 @@ canvas should appear with the spaceship example:
 Alternatively, you can run the same game as a Python script from the console 
 with:
 
-    python spaceship.py
+    python3 spaceship.py
 
 ## Documentation
 

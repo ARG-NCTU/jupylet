@@ -105,6 +105,10 @@ command:
 
     cd ~/jupylet/examples/
 
+If you have not installed the jupyter environment:
+
+    sudo apt install jupyter-notebook
+
 And start a jupyter notebook with:
 
     jupyter lab

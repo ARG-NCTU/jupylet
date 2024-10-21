@@ -67,7 +67,15 @@ chapters in the Jupylet Programmer's Reference Guide.
 
 ## How to Install and Run Jupylet
 
-**On Linux** &ndash; download "Miniconda3 Linux 64-bit". This should download the file
+Make sure you are in the default dir:
+
+    cd ~/
+
+Clone this repo:
+
+    git clone git@github.com:ARG-NCTU/jupylet.git
+
+Download "Miniconda3 Linux 64-bit". This should download the file
 Miniconda3-latest-Linux-x86_64.sh:
 
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -95,7 +103,7 @@ following command in the console:
 Next, enter the *jupylet/examples/* directory with the change directory
 command:
 
-    cd jupylet/examples/
+    cd ~/jupylet/examples/
 
 And start a jupyter notebook with:
 
@@ -105,6 +113,10 @@ Run the notebook by following the instructions in the notebook and a game
 canvas should appear with the spaceship example:
 
 <img src="https://github.com/nir/jupylet/raw/master/docs/images/spaceship.gif" width="256" height="256" />
+
+Leave conda environment:
+
+    conda deactivate
 
 Alternatively, you can run the same game as a Python script from the console 
 with:
